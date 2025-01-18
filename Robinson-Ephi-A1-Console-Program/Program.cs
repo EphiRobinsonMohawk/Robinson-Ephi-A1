@@ -13,6 +13,7 @@ string driveHome = ("You get in your car and begin to drive home \nOn the way ho
             "\nAltho you see no cars behind you at this time of night");
 string givenUp = ("You lay down accepting your fate of being slowly digested by this big ol' fish");
 string otherEnd = ("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
+string flatLine = ("Your chest begins to tighten,you feel weak, the feeling gets worse and worse until you lose consciousness \n\nPermanently \n\n");
 
 //Question: Will player Fish? 🐟
 if (input.Contains("1") && question == 1)
@@ -129,6 +130,12 @@ if (input.Contains("1") && question == 3)
         Console.Clear();
         Console.WriteLine($"Content that you don't need that tasty burger, you return home to dream of scary fish");
     }
+    else if (input != ("1") && input != ("2") && input != ("3"))
+    {
+        Console.Clear();
+        question = 1;
+        Console.WriteLine($"{flatLine}");
+    }
 }
 //Damn player, you don't want A&W 😔
 else if (input.Contains("2") && question == 3)
@@ -136,4 +143,11 @@ else if (input.Contains("2") && question == 3)
     Console.Clear();
     Console.WriteLine("You drive home safely and fall asleep with dreams of horrific fish");
 }
+else if (input != ("1") && input != ("2") && input != ("3"))
+{
+    Console.Clear();
+    question = 1;
+    Console.WriteLine($"{flatLine}");
+}
+
 
