@@ -1,10 +1,17 @@
 ﻿//Start of the project :)
 
+using System.Runtime.CompilerServices;
+
 Console.WriteLine(value: "Driving around while bored and angry \nYou come upon an fishing rod ready and baited\n\n1.Go Fishing!\n2.Drive Home");
 string input = Console.ReadLine();
 string name = input;
 int question = 1; //Question variable to try and keeps things seperate so it doesn't try to answer the wrong if and so that I can go back to questions from different spots 
 string tooBroke = ("Unable to afford your meal, you go home and cry yourself to sleep \nDreaming of horrific fish following you from the corner of your eye");
+string goingToAW = ("\n1.Stop for a bite to eat at A&W\n2.Continue driving home");
+string driveHome = ("You get in your car and begin to drive home \nOn the way home you feel like you're being followed " +
+            "\nAltho you see no cars behind you at this time of night");
+string giveUp = ("You lay down accepting your fate of being slowly digested by this big ol' fish");
+string otherEnd = ("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
 
 if (input.Contains("1") && question == 1)
 {
@@ -33,33 +40,31 @@ if (input.Contains("1") && question == 1)
             if (input.Contains("1") && question == 6)
             {
                 Console.Clear();
-                Console.WriteLine("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
+                Console.WriteLine($"{otherEnd}");
                 question = 3;
-                Console.WriteLine("You get in your car and begin to drive home \nOn the way home you feel like you're being followed " +
-            "\nAltho you see no cars behind you at this time of night");
-                Console.WriteLine("\n1.Stop for a bite to eat at A&W\n2.Continue driving home");
+                Console.WriteLine($"{driveHome}");
+                Console.WriteLine($"{goingToAW}");
                 input = Console.ReadLine();
             }
             else if (input.Contains("2") && question == 6)
             {
                 Console.Clear();
-                Console.WriteLine("You lay down accepting your fate of being slowly digested by this big ol' fish");
+                Console.WriteLine($"{giveUp}");
             }
         }
         else if (input.Contains("2") && question == 4)
         {
             Console.Clear();
-            Console.WriteLine("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
+            Console.WriteLine($"{otherEnd}");
             question = 3;
-            Console.WriteLine("You get in your car and begin to drive home \nOn the way home you feel like you're being followed " +
-        "\nAltho you see no cars behind you at this time of night");
-            Console.WriteLine("\n1.Stop for a bite to eat at A&W\n2.Continue driving home");
+            Console.WriteLine($"{driveHome}");
+            Console.WriteLine($"{goingToAW}");
             input = Console.ReadLine();
         }
         else if (input.Contains("3") && question == 4)
         {
             Console.Clear();
-            Console.WriteLine("You lay down accepting your fate of being slowly digested by this big ol' fish");
+            Console.WriteLine($"{giveUp}");
         }
 
     }
@@ -68,9 +73,8 @@ if (input.Contains("1") && question == 1)
         Console.Clear();
         Console.WriteLine("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
         question = 3;
-        Console.WriteLine("You get in your car and begin to drive home \nOn the way home you feel like you're being followed " +
-    "\nAltho you see no cars behind you at this time of night");
-        Console.WriteLine("\n1.Stop for a bite to eat at A&W\n2.Continue driving home");
+        Console.WriteLine($"{driveHome}");
+        Console.WriteLine($"{goingToAW}");
         input = Console.ReadLine();
     }
 }
@@ -80,9 +84,8 @@ else if (input.Contains("2") && question == 1)
 {
     question = 3;
     Console.Clear();
-    Console.WriteLine("You get in your car and begin to drive home \nOn the way home you feel like you're being followed " +
-        "\nAltho you see no cars behind you at this time of night");
-    Console.WriteLine("\n1.Stop for a bite to eat at A&W\n2.Continue driving home");
+    Console.WriteLine($"{driveHome}");
+    Console.WriteLine($"{goingToAW}");
     input = Console.ReadLine();
 }
 if (input.Contains("1") && question == 3)
