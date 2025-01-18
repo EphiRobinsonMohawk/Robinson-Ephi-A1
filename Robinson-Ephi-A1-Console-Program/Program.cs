@@ -76,7 +76,6 @@ if (input.Contains("1") && question == 1)
     else if (input.Contains("2") && question == 2)
     {
         Console.Clear();
-        Console.WriteLine("You squirm through this gargantuan fishes pipes and come out the other end\nYou are then able to swim back to the dock and your car\n");
         question = 3;
         Console.WriteLine($"{driveHome}");
         Console.WriteLine($"{goingToAW}");
